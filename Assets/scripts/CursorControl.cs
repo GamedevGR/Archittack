@@ -14,6 +14,7 @@ public class CursorControl : MonoBehaviour {
     private string dropButton = "Drop1";
     private SpriteRenderer spriteRenderer;
     private List<string> stoneBlocks;
+    private Color playerColor;
 
     void Awake () {
         // TODO: get a reference to the countdown clock
@@ -26,9 +27,11 @@ public class CursorControl : MonoBehaviour {
             horizontalAxis = "Horizontal2";
             verticalAxis = "Vertical2";
             dropButton = "Drop2";
-            spriteRenderer.color = new Color(1, 0, 0);
+            playerColor = Color.red;
+            spriteRenderer.color = playerColor;
         } else {
-            spriteRenderer.color = new Color(0, 0, 1);
+            playerColor = Color.blue;
+            spriteRenderer.color = playerColor;
         }
     }
 
@@ -39,6 +42,14 @@ public class CursorControl : MonoBehaviour {
 
     void Update ()
     {
+#if UNITY_EDITOR
+        float pX = transform.parent.position.x;
+        float pY = transform.parent.position.y;
+        Debug.DrawLine(new Vector3(pX + topLeftBound.x, pY + bottomRightBound.y, 0), new Vector3(pX + bottomRightBound.x, pY + bottomRightBound.y, 0), playerColor);
+        Debug.DrawLine(new Vector3(pX + topLeftBound.x, pY + topLeftBound.y, 0), new Vector3(pX + bottomRightBound.x, pY + topLeftBound.y, 0), playerColor);
+        Debug.DrawLine(new Vector3(pX + bottomRightBound.x, pY + bottomRightBound.y, 0), new Vector3(pX + bottomRightBound.x, pY + topLeftBound.y, 0), playerColor);
+        Debug.DrawLine(new Vector3(pX + topLeftBound.x, pY + bottomRightBound.y, 0), new Vector3(pX + topLeftBound.x, pY + topLeftBound.y, 0), playerColor);
+#endif
         // Cursor location handling
         float hSpeed = Input.GetAxis(horizontalAxis);
         float vSpeed = Input.GetAxis(verticalAxis);
@@ -70,7 +81,6 @@ public class CursorControl : MonoBehaviour {
             int r = Random.Range(0, stoneBlocks.Count);
             GameObject block = Instantiate(Resources.Load(stoneBlocks[r])) as GameObject;
             block.transform.position = new Vector2(transform.position.x, transform.position.y);
-			block.transform.SetParent(transform.parent);
         }
     }
 }
