@@ -13,9 +13,10 @@ public class CursorControl : MonoBehaviour {
     private string verticalAxis = "Vertical1";
     private string dropButton = "Drop1";
     private SpriteRenderer spriteRenderer;
-	private List<string> stoneBlocks;
+    private List<string> stoneBlocks;
 
     void Awake () {
+        // TODO: get a reference to the countdown clock
         body = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
         spriteRenderer = this.GetComponent<SpriteRenderer>() as SpriteRenderer;
         stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare"};
@@ -29,13 +30,13 @@ public class CursorControl : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 
     }
 
-    // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 
         // Cursor location handling
         float hSpeed = Input.GetAxis(horizontalAxis);
@@ -45,6 +46,7 @@ public class CursorControl : MonoBehaviour {
 
         float newX = transform.localPosition.x;
         float newY = transform.localPosition.y;
+
         // bound the cursor to the box
         if (transform.localPosition.x <= topLeftBound.x) {
             newX = topLeftBound.x;
@@ -60,7 +62,9 @@ public class CursorControl : MonoBehaviour {
 
         // Droping blocks
         if (Input.GetButtonDown(dropButton)) {
-			int r = Random.Range(0, stoneBlocks.Count);
+            // TODO: delay between drops
+            // TODO: reset countdown clock
+            int r = Random.Range(0, stoneBlocks.Count);
             GameObject block = Instantiate(Resources.Load(stoneBlocks[r])) as GameObject;
             block.transform.position = new Vector2(transform.position.x, transform.position.y);
         }
