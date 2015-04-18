@@ -8,6 +8,8 @@ public class CountdownClock : MonoBehaviour {
     public float currentTime;
 	public string blah;
 
+    public ClockUI clockUI;
+
     // Use this for initialization
     void Start ()
     {
@@ -23,8 +25,12 @@ public class CountdownClock : MonoBehaviour {
 		} else {
 			ResetTimer ();
 		}
-		
+
+        float angle = -(1 - currentTime / maxTime) * 360;
+        clockUI.SetRotation(angle);
+
 		if (currentTime < 0) {
+            currentTime = 0;
 			WinCondition.GameOver(transform.parent.name);
 		}
     }

@@ -15,6 +15,6 @@ public class ClockUI : MonoBehaviour {
     public void SetRotation(float angle)
     {
         float current = clockHand.transform.rotation.z;
-        clockHand.transform.Rotate(0, 0, angle - current);
+        clockHand.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
