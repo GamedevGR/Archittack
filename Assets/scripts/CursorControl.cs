@@ -20,8 +20,10 @@ public class CursorControl : MonoBehaviour {
         // TODO: get a reference to the countdown clock
         body = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
         spriteRenderer = this.GetComponent<SpriteRenderer>() as SpriteRenderer;
-        stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare"};
-        if (playerNumber != 1) {
+		//stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
+		stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
+
+		if (playerNumber != 1) {
             horizontalAxis = "Horizontal2";
             verticalAxis = "Vertical2";
             dropButton = "Drop2";
@@ -74,6 +76,8 @@ public class CursorControl : MonoBehaviour {
         if (Input.GetButtonDown(dropButton)) {
             // TODO: delay between drops
             // TODO: reset countdown clock
+			transform.parent.GetComponentInChildren<CountdownClock>().ResetTimer();
+
             int r = Random.Range(0, stoneBlocks.Count);
             GameObject block = Instantiate(Resources.Load(stoneBlocks[r])) as GameObject;
             block.transform.position = new Vector2(transform.position.x, transform.position.y);

@@ -17,7 +17,7 @@ public class WinCondition : MonoBehaviour {
         Debug.DrawLine(new Vector3(-20, winHeight - lineBuffer, 0), new Vector3(20, winHeight - lineBuffer, 0), Color.red);
     }
 
-    public void GameOver(string winner)
+    public static void GameOver(string winner)
     {
         Debug.Log(winner + " won the game!");
     }
