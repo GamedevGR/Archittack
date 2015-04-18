@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": ".",
+            "file_exclude_patterns": ["*.meta", "*.csproj", "*.sln"],
+            "folder_exclude_patterns": ["Temp", "Library"]
+		}
+	],
+    "settings":
+    {
+        "translate_tabs_to_spaces": true,
+        "default_line_ending": "unix",
+        "ensure_newline_at_eof_on_save": true,
+        "trim_trailing_white_space_on_save": true
+    }
+}
