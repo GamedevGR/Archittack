@@ -6,6 +6,7 @@ public class CountdownClock : MonoBehaviour {
     public int numAboveLine;
     public float maxTime;
     public float currentTime;
+	public string blah;
 
     // Use this for initialization
     void Start ()

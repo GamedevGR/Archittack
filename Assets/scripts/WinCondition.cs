@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WinCondition : MonoBehaviour {
 
-    public static int winHeight;
+    public static int winHeight = 22;
 
     void Start ()
     {

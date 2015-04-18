@@ -5,19 +5,31 @@ public class BlockControl : MonoBehaviour
 {
 
     private bool wasAboveLine = false;
+	private CountdownClock cntdwnclk;
 
     void Awake ()
     {
-        // TODO: get a reference to the clock for the player
+        
     }
 
     void Start ()
     {
+		cntdwnclk = transform.parent.GetComponentInChildren<CountdownClock>();
 
     }
 
-    void Update ()
+    void FixedUpdate ()
     {
-        // TODO: check if block is above win line (within tolerance) and report on state change
+		// TODO: check if block is above win line (within tolerance) and report on state change
+		if (transform.position.y >= WinCondition.winHeight && !wasAboveLine) {
+			Debug.Log("I am above the line, which is: " + WinCondition.winHeight + " I am: " + transform.position.y);
+			wasAboveLine = true;
+			cntdwnclk.ReportAboveLine ();
+		} else if (transform.position.y <= WinCondition.winHeight && wasAboveLine) {
+			Debug.Log("Don't do drugs kids");
+			wasAboveLine = false;
+			cntdwnclk.ReportBelowLine ();
+		}
+
     }
 }

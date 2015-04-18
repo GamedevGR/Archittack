@@ -67,6 +67,7 @@ public class CursorControl : MonoBehaviour {
             int r = Random.Range(0, stoneBlocks.Count);
             GameObject block = Instantiate(Resources.Load(stoneBlocks[r])) as GameObject;
             block.transform.position = new Vector2(transform.position.x, transform.position.y);
+			block.transform.SetParent(transform.parent);
         }
     }
 }
