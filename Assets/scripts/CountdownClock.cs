@@ -18,23 +18,29 @@ public class CountdownClock : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        // TODO: decrement currentTime if numAboveLine > 0
-
-        // TODO: if current time <= 0 report winner to game manager
+		if (numAboveLine > 0) {
+			currentTime -= Time.deltaTime;
+		} else {
+			ResetTimer ();
+		}
+		
+		if (currentTime < 0) {
+			WinCondition.GameOver(transform.parent.name);
+		}
     }
 
     public void ResetTimer()
     {
-        // TODO: reset the timer (call from cursor)
+		currentTime = maxTime;
     }
 
     public void ReportAboveLine()
     {
-        // TODO: implement
+		numAboveLine ++;
     }
 
     public void ReportBelowLine()
     {
-        // TODO: implement
-    }
+		numAboveLine --;
+	}
 }

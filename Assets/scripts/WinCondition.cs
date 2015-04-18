@@ -15,7 +15,7 @@ public class WinCondition : MonoBehaviour {
 
     }
 
-    public void GameOver(string winner)
+    public static void GameOver(string winner)
     {
         Debug.Log(winner + " won the game!");
     }
