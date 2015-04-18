@@ -11,15 +11,18 @@ public class CursorControl : MonoBehaviour {
     private string horizontalAxis = "Horizontal1";
     private string verticalAxis = "Vertical1";
     private string dropButton = "Drop1";
-    private Vector2 parentLocation;
+    private SpriteRenderer spriteRenderer;
 
     void Awake () {
         body = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
-        parentLocation = transform.position;
+        spriteRenderer = this.GetComponent<SpriteRenderer>() as SpriteRenderer;
         if (playerNumber != 1) {
             horizontalAxis = "Horizontal2";
             verticalAxis = "Vertical2";
             dropButton = "Drop2";
+            spriteRenderer.color = new Color(1, 0, 0);
+        } else {
+            spriteRenderer.color = new Color(0, 0, 1);
         }
     }
 
