@@ -9,13 +9,12 @@ public class BlockControl : MonoBehaviour
 
     void Awake ()
     {
-        
+
     }
 
     void Start ()
     {
 		cntdwnclk = transform.parent.GetComponentInChildren<CountdownClock>();
-
     }
 
     void FixedUpdate ()
