@@ -33,6 +33,8 @@ public class CursorControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        // Cursor location handling
         float hSpeed = Input.GetAxis(horizontalAxis);
         float vSpeed = Input.GetAxis(verticalAxis);
 
@@ -52,5 +54,11 @@ public class CursorControl : MonoBehaviour {
             newY = bottomRightBound.y;
         }
         transform.localPosition = new Vector2 (newX, newY);
+
+        // Droping blocks
+        if (Input.GetButtonDown(dropButton)) {
+            GameObject block = Instantiate(Resources.Load("square_1x1_block")) as GameObject;
+            block.transform.position = new Vector2(transform.position.x, transform.position.y);
+        }
     }
 }

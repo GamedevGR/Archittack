@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   maxSpeed: 25
-  topLeftBound: {x: -11, y: 9}
-  bottomRightBound: {x: 11, y: 7}
+  topLeftBound: {x: -8, y: 9}
+  bottomRightBound: {x: 8, y: 7}
 --- !u!212 &21208716
 SpriteRenderer:
   m_ObjectHideFlags: 1
