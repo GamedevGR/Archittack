@@ -32,10 +32,10 @@ public class CursorControl : MonoBehaviour {
             horizontalAxis = "Horizontal2";
             verticalAxis = "Vertical2";
             dropButton = "Drop2";
-            playerColor = Color.red;
+            playerColor = new Color(255f/255f, 180/255f, 180/255f);
             cursor.GetComponent<SpriteRenderer>().color = playerColor;
         } else {
-            playerColor = Color.blue;
+            playerColor = new Color(180/255f, 180/255f, 255f/255f);
             cursor.GetComponent<SpriteRenderer>().color = playerColor;
         }
     }
