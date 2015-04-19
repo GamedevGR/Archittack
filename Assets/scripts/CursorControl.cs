@@ -87,7 +87,6 @@ public class CursorControl : MonoBehaviour {
             
 			countdownClock.ResetTimer();
 
-
             string blockName;
             if (playerNumber == 1) {
                 blockName = gameManager.player1Queue.Dequeue() as string;
