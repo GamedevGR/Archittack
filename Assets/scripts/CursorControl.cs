@@ -20,6 +20,7 @@ public class CursorControl : MonoBehaviour {
     private GameManagerScript gameManager;
 	public float dropDelay;
 	private float dropTimer = 0;
+    public AudioSource pop;
 
     void Awake () {
         // TODO: get a reference to the countdown clock
@@ -83,9 +84,10 @@ public class CursorControl : MonoBehaviour {
 
         // Droping blocks
         if (Input.GetButton(dropButton) && dropTimer <= 0) {
-			dropTimer = dropDelay;
+            pop.Play();
+            dropTimer = dropDelay;
 
-			countdownClock.ResetTimer();
+            countdownClock.ResetTimer();
 
             string blockName;
             if (playerNumber == 1) {

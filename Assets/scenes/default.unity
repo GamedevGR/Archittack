@@ -1077,38 +1077,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442330, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: clockUI
-      value: 
-      objectReference: {fileID: 170826076}
     - target: {fileID: 164908, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
       propertyPath: m_Name
       value: player1
       objectReference: {fileID: 0}
-    - target: {fileID: 11443522, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: dropDelay
-      value: .800000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 11443522, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: playerColor.r
-      value: .498039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 11443522, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: playerColor.g
-      value: .498039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 11443522, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: playerColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 409690, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 409690, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 11442330, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+      propertyPath: clockUI
+      value: 
+      objectReference: {fileID: 170826076}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
   m_IsPrefabParent: 0
