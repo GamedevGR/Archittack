@@ -14,7 +14,7 @@ public class CursorControl : MonoBehaviour {
     private string dropButton = "Drop1";
     private SpriteRenderer spriteRenderer;
     private List<string> stoneBlocks;
-    private Color playerColor;
+    public Color playerColor;
     private GameObject cursor;
     private CountdownClock countdownClock;
 

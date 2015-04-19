@@ -6,15 +6,19 @@ public class BlockControl : MonoBehaviour
 
     private bool wasAboveLine = false;
 	private CountdownClock cntdwnclk;
+    private CursorControl cursor;
+    private SpriteRenderer spriteRenderer;
 
     void Awake ()
     {
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Start ()
     {
 		cntdwnclk = transform.parent.GetComponentInChildren<CountdownClock>();
+        cursor = transform.parent.GetComponent<CursorControl>();
+        spriteRenderer.color = cursor.playerColor;
     }
 
     void FixedUpdate ()
