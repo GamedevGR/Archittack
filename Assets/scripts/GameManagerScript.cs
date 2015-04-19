@@ -11,7 +11,6 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject player2;
     public GameObject startMenu;
     public GameObject finishMenu;
-    public GameObject winZone;
     public GameObject ground;
 
 
@@ -50,9 +49,6 @@ public class GameManagerScript : MonoBehaviour {
         finishMenu.SetActive(false);
         player1.SetActive (false);
         player2.SetActive (false);
-        winZone.transform.position = new Vector3(0,
-            winHeight + 2,
-            winZone.transform.position.z);
     }
 
     void Update ()

@@ -428,7 +428,6 @@ GameObject:
   - 224: {fileID: 179729405}
   - 222: {fileID: 179729407}
   - 114: {fileID: 179729406}
-  - 114: {fileID: 179729408}
   m_Layer: 5
   m_Name: player2State
   m_TagString: Untagged
@@ -480,24 +479,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179729404}
---- !u!114 &179729408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179729404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe1853ca17631488a8e7a36b0c1a6b1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  startMenu: {fileID: 0}
-  finishMenu: {fileID: 0}
-  winZone: {fileID: 0}
-  ground: {fileID: 0}
-  queueLength: 4
 --- !u!1 &233259270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,7 +2368,6 @@ MonoBehaviour:
   player2: {fileID: 0}
   startMenu: {fileID: 233259270}
   finishMenu: {fileID: 837335356}
-  winZone: {fileID: 0}
   ground: {fileID: 0}
   queueLength: 4
 --- !u!4 &1750634128
