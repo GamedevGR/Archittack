@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAboveLine: 0
-  maxTime: 10
+  maxTime: 5
   currentTime: 0
   blah: Hello World
   clockUI: {fileID: 0}
@@ -131,8 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   maxSpeed: 25
-  topLeftBound: {x: -8, y: 18}
-  bottomRightBound: {x: 8, y: 12}
+  topLeftBound: {x: -10, y: 18}
+  bottomRightBound: {x: 10, y: 0}
 --- !u!212 &21208716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2106756315
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: .580882311, g: .601115525, b: 1, a: 1}

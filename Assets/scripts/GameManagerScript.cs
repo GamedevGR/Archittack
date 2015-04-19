@@ -3,13 +3,14 @@ using System.Collections;
 
 public class GameManagerScript : MonoBehaviour {
 
-    public static int winHeight = 18;
+    public static int winHeight = 16;
     public static int lineBuffer = 1;
 
     public GameObject player1;
     public GameObject player2;
     public GameObject startMenu;
     public GameObject finishMenu;
+    public GameObject winZone;
 
     void Awake ()
     {
@@ -23,6 +24,9 @@ public class GameManagerScript : MonoBehaviour {
         finishMenu.SetActive(false);
         player1.SetActive (false);
         player2.SetActive (false);
+        winZone.transform.position = new Vector3(0,
+            winHeight + 2,
+            winZone.transform.position.z);
     }
 
     void Update ()
