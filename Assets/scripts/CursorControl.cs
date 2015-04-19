@@ -18,6 +18,8 @@ public class CursorControl : MonoBehaviour {
     private GameObject cursor;
     private CountdownClock countdownClock;
     private GameManagerScript gameManager;
+	public float dropDelay;
+	private float dropTimer = 0;
 
     void Awake () {
         // TODO: get a reference to the countdown clock
@@ -45,6 +47,10 @@ public class CursorControl : MonoBehaviour {
 
     void Update ()
     {
+		if (dropTimer > 0) {
+			dropTimer -= Time.deltaTime;
+		}
+
 #if UNITY_EDITOR
         float pX = cursor.transform.parent.position.x;
         float pY = cursor.transform.parent.position.y;
@@ -76,9 +82,9 @@ public class CursorControl : MonoBehaviour {
         cursor.transform.localPosition = new Vector2 (newX, newY);
 
         // Droping blocks
-        if (Input.GetButtonDown(dropButton)) {
-            // TODO: delay between drops
-            // TODO: reset countdown clock
+        if (Input.GetButton(dropButton) && dropTimer <= 0) {
+			dropTimer = dropDelay;
+            
 			countdownClock.ResetTimer();
 
 
