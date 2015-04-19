@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 409690}
   - 50: {fileID: 5040130}
   - 212: {fileID: 21208716}
-  - 114: {fileID: 11468884}
   m_Layer: 0
   m_Name: cursor
   m_TagString: PlayerZone
@@ -42,6 +41,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 418174}
+  - 114: {fileID: 11443522}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 10}
+  m_LocalPosition: {x: -6, y: -8, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 409690}
@@ -117,12 +117,13 @@ MonoBehaviour:
   maxTime: 10
   currentTime: 0
   blah: Hello World
---- !u!114 &11468884
+  clockUI: {fileID: 0}
+--- !u!114 &11443522
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138004}
+  m_GameObject: {fileID: 164908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc0965962c5d4ba4b1fa4417359b996, type: 3}

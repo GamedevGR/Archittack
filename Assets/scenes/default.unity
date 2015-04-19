@@ -780,6 +780,7 @@ GameObject:
   - 224: {fileID: 793503845}
   - 222: {fileID: 793503844}
   - 114: {fileID: 793503843}
+  - 114: {fileID: 793503846}
   m_Layer: 5
   m_Name: queue1
   m_TagString: Untagged
@@ -836,6 +837,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: .5}
   m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &793503846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793503842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3101a3cffc24cc3997ebc4db206bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &830426380
 Prefab:
   m_ObjectHideFlags: 0
@@ -875,14 +887,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 164908, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
-      propertyPath: m_Name
-      value: player1
-      objectReference: {fileID: 0}
     - target: {fileID: 11442330, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
       propertyPath: clockUI
       value: 
       objectReference: {fileID: 170826076}
+    - target: {fileID: 164908, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+      propertyPath: m_Name
+      value: player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
   m_IsPrefabParent: 0
@@ -902,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &837335357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1656,15 +1668,15 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11468884, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+    - target: {fileID: 0}
       propertyPath: topLeftBound.y
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 11468884, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+    - target: {fileID: 0}
       propertyPath: bottomRightBound.y
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 11468884, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerNumber
       value: 2
       objectReference: {fileID: 0}
@@ -1672,6 +1684,10 @@ Prefab:
       propertyPath: clockUI
       value: 
       objectReference: {fileID: 100987005}
+    - target: {fileID: 11443522, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
+      propertyPath: playerNumber
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02daa4d0c7c3e43e99a409c0e03a3fa6, type: 2}
   m_IsPrefabParent: 0
