@@ -27,12 +27,18 @@ public class GameManagerScript : MonoBehaviour {
         player1 = GameObject.Find("player1");
         player2 = GameObject.Find("player2");
         ground = GameObject.Find("ground");
-    }
 
-    void Start ()
-    {
-        // stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
-        stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
+		// stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
+		stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
+
+		for (int i = 0; i < queueLength; i++) {
+			player1Queue.Enqueue (NextPieceForQueue ());
+			player2Queue.Enqueue (NextPieceForQueue ());
+		}
+	}
+	
+	void Start ()
+	{
         startMenu.SetActive(true);
         finishMenu.SetActive(false);
         player1.SetActive (false);

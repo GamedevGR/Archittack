@@ -818,6 +818,7 @@ GameObject:
   - 224: {fileID: 671952379}
   - 222: {fileID: 671952381}
   - 114: {fileID: 671952380}
+  - 114: {fileID: 671952382}
   m_Layer: 5
   m_Name: queue2
   m_TagString: Untagged
@@ -874,6 +875,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 671952378}
+--- !u!114 &671952382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 671952378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3101a3cffc24cc3997ebc4db206bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 2
+  image1: {fileID: 1273191975}
+  image2: {fileID: 963695767}
+  image3: {fileID: 58618220}
+  image4: {fileID: 543609800}
 --- !u!1 &793503842
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3101a3cffc24cc3997ebc4db206bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 1
+  image1: {fileID: 1379734872}
+  image2: {fileID: 407866052}
+  image3: {fileID: 256290377}
+  image4: {fileID: 1569541246}
 --- !u!1001 &830426380
 Prefab:
   m_ObjectHideFlags: 0
