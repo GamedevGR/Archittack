@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManagerScript : MonoBehaviour {
 
@@ -12,6 +13,14 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject finishMenu;
     public GameObject winZone;
 
+
+    public Queue player1Queue = new Queue();
+    public Queue player2Queue = new Queue();
+
+    public int queueLength = 4;
+
+    private List<string> stoneBlocks;
+
     void Awake ()
     {
         player1 = GameObject.Find("player1");
@@ -20,6 +29,8 @@ public class GameManagerScript : MonoBehaviour {
 
     void Start ()
     {
+        // stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
+        stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
         startMenu.SetActive(true);
         finishMenu.SetActive(false);
         player1.SetActive (false);
@@ -33,6 +44,13 @@ public class GameManagerScript : MonoBehaviour {
     {
         Debug.DrawLine(new Vector3(-20, winHeight, 0), new Vector3(20, winHeight, 0), Color.green);
         Debug.DrawLine(new Vector3(-20, winHeight - lineBuffer, 0), new Vector3(20, winHeight - lineBuffer, 0), Color.red);
+
+        if(player1Queue.Count < queueLength) {
+            player1Queue.Enqueue(NextPieceForQueue());
+        }
+        if(player2Queue.Count < queueLength) {
+            player2Queue.Enqueue(NextPieceForQueue());
+        }
     }
 
     public void GameOver(string winner)
@@ -55,5 +73,11 @@ public class GameManagerScript : MonoBehaviour {
         player1.SetActive (true);
         player2.SetActive (true);
         startMenu.SetActive(false);
+    }
+
+    private string NextPieceForQueue()
+    {
+        int r = Random.Range(0, stoneBlocks.Count);
+        return stoneBlocks[r];
     }
 }

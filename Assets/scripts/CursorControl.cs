@@ -17,11 +17,10 @@ public class CursorControl : MonoBehaviour {
     public Color playerColor;
     private GameObject cursor;
     private CountdownClock countdownClock;
+    private GameManagerScript gameManager;
 
     void Awake () {
         // TODO: get a reference to the countdown clock
-		// stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
-		stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
         cursor = transform.FindChild("cursor").gameObject;
         body = cursor.GetComponent<Rigidbody2D>() as Rigidbody2D;
         spriteRenderer = this.GetComponent<SpriteRenderer>() as SpriteRenderer;
@@ -41,6 +40,7 @@ public class CursorControl : MonoBehaviour {
 
     void Start ()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
     }
 
     void Update ()
@@ -81,8 +81,14 @@ public class CursorControl : MonoBehaviour {
             // TODO: reset countdown clock
 			countdownClock.ResetTimer();
 
-            int r = Random.Range(0, stoneBlocks.Count);
-            GameObject block = Instantiate(Resources.Load(stoneBlocks[r])) as GameObject;
+
+            string blockName;
+            if (playerNumber == 1) {
+                blockName = gameManager.player1Queue.Dequeue() as string;
+            } else {
+                blockName = gameManager.player2Queue.Dequeue() as string;
+            }
+            GameObject block = Instantiate(Resources.Load(blockName)) as GameObject;
             block.transform.position = new Vector2(cursor.transform.position.x, cursor.transform.position.y);
             block.transform.SetParent(transform);
         }
