@@ -12,6 +12,7 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject startMenu;
     public GameObject finishMenu;
     public GameObject winZone;
+    public GameObject ground;
 
 
     public Queue player1Queue = new Queue();
@@ -25,6 +26,7 @@ public class GameManagerScript : MonoBehaviour {
     {
         player1 = GameObject.Find("player1");
         player2 = GameObject.Find("player2");
+        ground = GameObject.Find("ground");
     }
 
     void Start ()
@@ -56,8 +58,9 @@ public class GameManagerScript : MonoBehaviour {
     public void GameOver(string winner)
     {
         Debug.Log(winner + " won the game!");
-        player1.SetActive (true);
-        player2.SetActive (true);
+        player1.GetComponent<CursorControl>().enabled = false;
+        player2.GetComponent<CursorControl>().enabled = false;
+        ground.SetActive(false);
         finishMenu.SetActive(true);
     }
 

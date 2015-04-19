@@ -371,6 +371,7 @@ MonoBehaviour:
   startMenu: {fileID: 0}
   finishMenu: {fileID: 0}
   winZone: {fileID: 0}
+  ground: {fileID: 0}
   queueLength: 4
 --- !u!1 &233259270
 GameObject:
@@ -1797,6 +1798,7 @@ MonoBehaviour:
   startMenu: {fileID: 233259270}
   finishMenu: {fileID: 837335356}
   winZone: {fileID: 0}
+  ground: {fileID: 0}
   queueLength: 4
 --- !u!4 &1750634128
 Transform:
