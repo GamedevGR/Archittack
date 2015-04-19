@@ -20,11 +20,11 @@ public class BlockControl : MonoBehaviour
     void FixedUpdate ()
     {
 		// TODO: check if block is above win line (within tolerance) and report on state change
-		if (transform.position.y >= GameManager.winHeight && !wasAboveLine) {
-			Debug.Log("I am above the line, which is: " + GameManager.winHeight + " I am: " + transform.position.y);
+		if (transform.position.y >= GameManagerScript.winHeight && !wasAboveLine) {
+			Debug.Log("I am above the line, which is: " + GameManagerScript.winHeight + " I am: " + transform.position.y);
 			wasAboveLine = true;
 			cntdwnclk.ReportAboveLine ();
-		} else if (transform.position.y <= GameManager.winHeight && wasAboveLine) {
+		} else if (transform.position.y <= GameManagerScript.winHeight && wasAboveLine) {
 			Debug.Log("Don't do drugs kids");
 			wasAboveLine = false;
 			cntdwnclk.ReportBelowLine ();

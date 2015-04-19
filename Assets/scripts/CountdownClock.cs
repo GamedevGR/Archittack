@@ -9,12 +9,14 @@ public class CountdownClock : MonoBehaviour {
 	public string blah;
 
     public ClockUI clockUI;
+	private GameManagerScript gameManager;
 
     // Use this for initialization
     void Start ()
     {
         numAboveLine = 0;
         currentTime = maxTime;
+		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerScript> ();
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class CountdownClock : MonoBehaviour {
 
 		if (currentTime < 0) {
             currentTime = 0;
-			GameManager.GameOver(transform.parent.name);
+			gameManager.GameOver(transform.parent.name);
 		}
     }
 

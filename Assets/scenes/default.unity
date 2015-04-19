@@ -291,6 +291,7 @@ GameObject:
   - 224: {fileID: 179729405}
   - 222: {fileID: 179729407}
   - 114: {fileID: 179729406}
+  - 114: {fileID: 179729408}
   m_Layer: 5
   m_Name: player2State
   m_TagString: Untagged
@@ -342,6 +343,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179729404}
+--- !u!114 &179729408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179729404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1853ca17631488a8e7a36b0c1a6b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  startMenu: {fileID: 0}
+  finishMenu: {fileID: 0}
 --- !u!1 &233259270
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,13 +368,14 @@ GameObject:
   - 224: {fileID: 233259271}
   - 222: {fileID: 233259273}
   - 114: {fileID: 233259272}
+  - 114: {fileID: 233259274}
   m_Layer: 5
   m_Name: GameStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &233259271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -406,6 +423,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233259270}
+--- !u!114 &233259274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233259270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5ff283028e4403f81cc125c203e979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &282128186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1340,7 @@ GameObject:
   - 114: {fileID: 1113191525}
   - 114: {fileID: 1113191524}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1525,6 +1553,7 @@ GameObject:
   - 222: {fileID: 1352152739}
   - 114: {fileID: 1352152738}
   - 114: {fileID: 1352152740}
+  - 114: {fileID: 1352152741}
   m_Layer: 5
   m_Name: twoPlayerStartButton
   m_TagString: Untagged
@@ -1614,9 +1643,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1352152738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1352152741}
+        m_MethodName: TwoPlayerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1352152741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352152736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5ff283028e4403f81cc125c203e979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1353979795
 Prefab:
   m_ObjectHideFlags: 0
@@ -1702,6 +1754,7 @@ GameObject:
   - 222: {fileID: 1423225980}
   - 114: {fileID: 1423225979}
   - 114: {fileID: 1423225981}
+  - 114: {fileID: 1423225982}
   m_Layer: 5
   m_Name: singlePlayerStartButton
   m_TagString: Untagged
@@ -1791,9 +1844,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1423225979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423225982}
+        m_MethodName: OnePlayerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1423225982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423225977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5ff283028e4403f81cc125c203e979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1451589758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,6 +1942,7 @@ GameObject:
   - 222: {fileID: 1643687424}
   - 114: {fileID: 1643687425}
   - 114: {fileID: 1643687423}
+  - 114: {fileID: 1643687426}
   m_Layer: 5
   m_Name: settingsButton
   m_TagString: Untagged
@@ -1928,7 +2005,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643687425}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1643687426}
+        m_MethodName: SettingsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &1643687424
@@ -1958,6 +2047,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &1643687426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643687421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5ff283028e4403f81cc125c203e979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1664203643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +2130,7 @@ GameObject:
   - 222: {fileID: 1695518073}
   - 114: {fileID: 1695518072}
   - 114: {fileID: 1695518074}
+  - 114: {fileID: 1695518075}
   m_Layer: 5
   m_Name: replayButton
   m_TagString: Untagged
@@ -2119,9 +2220,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1695518072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1695518075}
+        m_MethodName: RestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1695518075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1695518070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18828a71ef19f4949a81c4d7021cfe61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750634126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1853ca17631488a8e7a36b0c1a6b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  startMenu: {fileID: 233259270}
+  finishMenu: {fileID: 837335356}
 --- !u!4 &1750634128
 Transform:
   m_ObjectHideFlags: 0
