@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5049678}
   - 58: {fileID: 5890016}
   - 114: {fileID: 11453048}
+  - 95: {fileID: 9532328}
   m_Layer: 0
   m_Name: StoneCircle
   m_TagString: Block
@@ -59,6 +60,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.77999997
+--- !u!95 &9532328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d42d5366c055841f390e2f4574255d60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11453048
 MonoBehaviour:
   m_ObjectHideFlags: 1

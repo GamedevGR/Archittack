@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5052666}
   - 60: {fileID: 6049034}
   - 114: {fileID: 11470500}
+  - 95: {fileID: 9542488}
   m_Layer: 0
   m_Name: StoneSquare
   m_TagString: Block
@@ -79,6 +80,23 @@ PolygonCollider2D:
       - {x: -1.01666665, y: -1.3366667}
       - {x: 1.02333331, y: -1.3366667}
       - {x: 1.02333331, y: -1.34333336}
+--- !u!95 &9542488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d42d5366c055841f390e2f4574255d60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11470500
 MonoBehaviour:
   m_ObjectHideFlags: 1

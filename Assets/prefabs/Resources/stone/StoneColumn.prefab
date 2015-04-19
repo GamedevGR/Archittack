@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5092258}
   - 60: {fileID: 6050044}
   - 114: {fileID: 11403754}
+  - 95: {fileID: 9552234}
   m_Layer: 0
   m_Name: StoneColumn
   m_TagString: Block
@@ -80,6 +81,23 @@ PolygonCollider2D:
       - {x: .889999986, y: -2.53666663}
       - {x: .883333325, y: -2.54333329}
       - {x: 1.00333333, y: -2.54333329}
+--- !u!95 &9552234
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118766}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d42d5366c055841f390e2f4574255d60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11403754
 MonoBehaviour:
   m_ObjectHideFlags: 1
