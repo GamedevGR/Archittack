@@ -4,11 +4,19 @@ using System.Collections;
 public class GameStartUI : MonoBehaviour {
 
     private GameManagerScript gameManager;
+    private string startButton = "Start";
 
 	void Start ()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 	}
+
+    void Update ()
+    {
+        if (Input.GetButton(startButton)) {
+            this.TwoPlayerButton();
+        }
+    }
 
     public void OnePlayerButton()
     {
