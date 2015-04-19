@@ -4,7 +4,7 @@ using System.Collections;
 public class GameStartUI : MonoBehaviour {
 
     private GameManagerScript gameManager;
-    private string startButton = "Start";
+    private string selectButton = "Select";
 
 	void Start ()
     {
@@ -13,7 +13,7 @@ public class GameStartUI : MonoBehaviour {
 
     void Update ()
     {
-        if (Input.GetButton(startButton)) {
+        if (Input.GetButton(selectButton)) {
             this.TwoPlayerButton();
         }
     }
