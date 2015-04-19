@@ -84,7 +84,7 @@ public class CursorControl : MonoBehaviour {
         // Droping blocks
         if (Input.GetButton(dropButton) && dropTimer <= 0) {
 			dropTimer = dropDelay;
-            
+
 			countdownClock.ResetTimer();
 
             string blockName;
@@ -96,6 +96,7 @@ public class CursorControl : MonoBehaviour {
             GameObject block = Instantiate(Resources.Load(blockName)) as GameObject;
             block.transform.position = new Vector2(cursor.transform.position.x, cursor.transform.position.y);
             block.transform.SetParent(transform);
+            block.GetComponent<Rigidbody2D>().velocity = body.velocity;
         }
     }
 }
