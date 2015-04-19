@@ -31,7 +31,7 @@ public class CountdownClock : MonoBehaviour {
 
 		if (currentTime < 0) {
             currentTime = 0;
-			WinCondition.GameOver(transform.parent.name);
+			GameManager.GameOver(transform.parent.name);
 		}
     }
 

@@ -20,7 +20,7 @@ public class CursorControl : MonoBehaviour {
 
     void Awake () {
         // TODO: get a reference to the countdown clock
-		//stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
+		// stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneCircle", "stone/StoneLgTriangle", "stone/StoneTriangle", "stone/StoneSquare", "stone/StoneFlat"};
 		stoneBlocks = new List<string>{"stone/StoneColumn", "stone/StoneSquare", "stone/StoneFlat"};
         cursor = transform.FindChild("cursor").gameObject;
         body = cursor.GetComponent<Rigidbody2D>() as Rigidbody2D;
