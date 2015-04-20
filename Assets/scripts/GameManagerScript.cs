@@ -43,6 +43,8 @@ public class GameManagerScript : MonoBehaviour {
             "stone/StoneSquare","stone/StoneSquare","stone/StoneSquare","stone/StoneSquare","stone/StoneSquare","stone/StoneSquare","stone/StoneSquare",
             "stone/StoneFlat","stone/StoneFlat","stone/StoneFlat","stone/StoneFlat","stone/StoneFlat",
             "bouncy/BouncySquare",
+            "wood/WoodPlank", "wood/WoodPlank", "wood/WoodPlank",
+            "wood/WoodSquare", "wood/WoodSquare", "wood/WoodSquare",
             "metal/MetalSquare"
         };
 
