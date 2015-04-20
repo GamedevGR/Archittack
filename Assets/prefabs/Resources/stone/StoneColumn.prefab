@@ -42,9 +42,9 @@ GameObject:
   - 4: {fileID: 418048}
   - 212: {fileID: 21250124}
   - 50: {fileID: 5092258}
-  - 60: {fileID: 6050044}
   - 114: {fileID: 11403754}
   - 95: {fileID: 9552234}
+  - 61: {fileID: 6199684}
   m_Layer: 0
   m_Name: StoneColumn
   m_TagString: Block
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.9801025, y: 9.34361076, z: 0}
+  m_LocalPosition: {x: -27.0100002, y: 7.86999989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453942}
@@ -163,8 +163,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6050044
-PolygonCollider2D:
+--- !u!61 &6199684
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -174,29 +174,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 1.09000003, y: -2.52999997}
-      - {x: 1.20333338, y: -2.41666675}
-      - {x: 1.2166667, y: -2.32999992}
-      - {x: 1.2166667, y: -2.2166667}
-      - {x: 1.21000004, y: -2.2166667}
-      - {x: 1.2166667, y: 2.2166667}
-      - {x: 1.2166667, y: 2.35666656}
-      - {x: 1.16999996, y: 2.47000003}
-      - {x: 1.04999995, y: 2.53666663}
-      - {x: .963333309, y: 2.54999995}
-      - {x: -1.00999999, y: 2.54999995}
-      - {x: -1.11000001, y: 2.49666667}
-      - {x: -1.15666664, y: 2.45000005}
-      - {x: -1.21000004, y: 2.34333324}
-      - {x: -1.21000004, y: -2.34333324}
-      - {x: -1.1633333, y: -2.46333337}
-      - {x: -1.02999997, y: -2.54333329}
-      - {x: -.876666665, y: -2.54333329}
-      - {x: .889999986, y: -2.53666663}
-      - {x: .883333325, y: -2.54333329}
-      - {x: 1.00333333, y: -2.54333329}
+  serializedVersion: 2
+  m_Size: {x: 2.4000001, y: 5.05000019}
 --- !u!95 &9552234
 Animator:
   serializedVersion: 3

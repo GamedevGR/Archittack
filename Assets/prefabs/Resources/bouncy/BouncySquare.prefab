@@ -76,7 +76,7 @@ GameObject:
   - 50: {fileID: 5012348}
   - 95: {fileID: 9539706}
   - 114: {fileID: 11451254}
-  - 60: {fileID: 6010646}
+  - 61: {fileID: 6115900}
   m_Layer: 0
   m_Name: BouncySquare
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4126778, y: 11.4109802, z: 0}
+  m_LocalPosition: {x: -29.4985905, y: 1.14610898, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480994}
@@ -163,8 +163,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6010646
-PolygonCollider2D:
+--- !u!61 &6115900
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -174,19 +174,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 1.27333331, y: 1.38}
-      - {x: -1.22000003, y: 1.38}
-      - {x: -1.34000003, y: 1.29333329}
-      - {x: -1.34000003, y: -1.19333339}
-      - {x: -1.28666663, y: -1.27333331}
-      - {x: -1.22666669, y: -1.32666671}
-      - {x: -1.16666663, y: -1.35333335}
-      - {x: -1.12, y: -1.36666667}
-      - {x: 1.32666671, y: -1.36666667}
-      - {x: 1.34000003, y: -1.24666667}
-      - {x: 1.34000003, y: 1.36000001}
+  serializedVersion: 2
+  m_Size: {x: 2.70000005, y: 2.70000005}
 --- !u!95 &9539706
 Animator:
   serializedVersion: 3

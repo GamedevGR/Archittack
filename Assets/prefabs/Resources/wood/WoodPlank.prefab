@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 432924}
   - 212: {fileID: 21231274}
   - 50: {fileID: 5081614}
-  - 60: {fileID: 6032038}
   - 95: {fileID: 9540178}
   - 114: {fileID: 11476252}
+  - 61: {fileID: 6167520}
   m_Layer: 0
   m_Name: WoodPlank
   m_TagString: Untagged
@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.0922203, y: 9.06165314, z: 0}
+  m_LocalPosition: {x: -28.5869999, y: 1.57500005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460218}
@@ -163,8 +163,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6032038
-PolygonCollider2D:
+--- !u!61 &6167520
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -174,14 +174,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 2.75333333, y: .446666658}
-      - {x: -2.77333331, y: .446666658}
-      - {x: -2.77333331, y: -.433333337}
-      - {x: 2.73333335, y: -.433333337}
-      - {x: 2.77333331, y: -.406666666}
-      - {x: 2.77333331, y: .419999987}
+  serializedVersion: 2
+  m_Size: {x: 5.4000001, y: .800000012}
 --- !u!95 &9540178
 Animator:
   serializedVersion: 3

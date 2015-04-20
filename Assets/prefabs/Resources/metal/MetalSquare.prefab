@@ -28,7 +28,7 @@ GameObject:
   - 50: {fileID: 5035594}
   - 95: {fileID: 9581684}
   - 114: {fileID: 11415938}
-  - 60: {fileID: 6004452}
+  - 61: {fileID: 6106880}
   m_Layer: 0
   m_Name: MetalSquare
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.2361908, y: 10.1254787, z: 0}
+  m_LocalPosition: {x: -29.3696117, y: 1.53921771, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435630}
@@ -163,8 +163,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6004452
-PolygonCollider2D:
+--- !u!61 &6106880
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -174,19 +174,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: .954999983, y: 1.03499997}
-      - {x: -.915000021, y: 1.03499997}
-      - {x: -1.005, y: .970000029}
-      - {x: -1.005, y: -.894999981}
-      - {x: -.964999974, y: -.954999983}
-      - {x: -.920000017, y: -.995000005}
-      - {x: -.875, y: -1.01499999}
-      - {x: -.839999974, y: -1.02499998}
-      - {x: .995000005, y: -1.02499998}
-      - {x: 1.005, y: -.935000002}
-      - {x: 1.005, y: 1.01999998}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
 --- !u!95 &9581684
 Animator:
   serializedVersion: 3
