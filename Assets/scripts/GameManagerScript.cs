@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -13,6 +14,13 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject finishMenu;
     public GameObject ground;
 
+    public Sprite player1Win;
+    public Sprite player1Lose;
+    public Sprite player2Win;
+    public Sprite player2Lose;
+
+    public Image player1Status;
+    public Image player2Status;
 
     public Queue player1Queue = new Queue();
     public Queue player2Queue = new Queue();
@@ -20,6 +28,7 @@ public class GameManagerScript : MonoBehaviour {
     public int queueLength = 4;
 
     private List<string> stoneBlocks;
+    private bool gameIsOver = false;
 
     void Awake ()
     {
@@ -66,6 +75,20 @@ public class GameManagerScript : MonoBehaviour {
 
     public void GameOver(string winner)
     {
+        if (gameIsOver) {
+            return;
+        }
+
+        gameIsOver = true;
+
+        if (winner == "player1") {
+            player1Status.sprite = player1Win;
+            player2Status.sprite = player2Lose;
+        } else {
+            player1Status.sprite = player1Lose;
+            player2Status.sprite = player2Win;
+        }
+
         Debug.Log(winner + " won the game!");
         player1.GetComponent<CursorControl>().enabled = false;
         player2.GetComponent<CursorControl>().enabled = false;
