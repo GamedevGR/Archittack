@@ -25,6 +25,8 @@ public class GameManagerScript : MonoBehaviour {
     public Queue player1Queue = new Queue();
     public Queue player2Queue = new Queue();
 
+	public GameObject keyboardPanel;
+
     public int queueLength = 4;
 
     private List<string> stoneBlocks;
@@ -60,6 +62,7 @@ public class GameManagerScript : MonoBehaviour {
         finishMenu.SetActive(false);
         player1.SetActive (false);
         player2.SetActive (false);
+        keyboardPanel.SetActive(false);
     }
 
     void Update ()
@@ -107,9 +110,18 @@ public class GameManagerScript : MonoBehaviour {
     public void StartTwoPlayerGame()
     {
         Debug.Log("Starting Two Player Game");
+
+        StartCoroutine(StartTwoPlayerGameSoon());
+    }
+
+    IEnumerator StartTwoPlayerGameSoon()
+    {
+        startMenu.SetActive(false);
+        keyboardPanel.SetActive(true);
+        yield return new WaitForSeconds(5);
+        keyboardPanel.SetActive(false);
         player1.SetActive (true);
         player2.SetActive (true);
-        startMenu.SetActive(false);
     }
 
     private string NextPieceForQueue()
@@ -117,4 +129,6 @@ public class GameManagerScript : MonoBehaviour {
         int r = Random.Range(0, stoneBlocks.Count);
         return stoneBlocks[r];
     }
+
+
 }
