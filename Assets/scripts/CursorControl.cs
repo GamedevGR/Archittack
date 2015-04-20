@@ -70,14 +70,14 @@ public class CursorControl : MonoBehaviour {
         float newY = cursor.transform.localPosition.y;
 
         // bound the cursor to the box
-        if (cursor.transform.localPosition.x <= topLeftBound.x) {
+        if (cursor.transform.localPosition.x < topLeftBound.x) {
             newX = topLeftBound.x;
-        } else if (cursor.transform.localPosition.x >= bottomRightBound.x) {
+        } else if (cursor.transform.localPosition.x > bottomRightBound.x) {
             newX = bottomRightBound.x;
         }
-        if (cursor.transform.localPosition.y >= topLeftBound.y) {
+        if (cursor.transform.localPosition.y > topLeftBound.y) {
             newY = topLeftBound.y;
-        } else if(cursor.transform.localPosition.y <= bottomRightBound.y) {
+        } else if(cursor.transform.localPosition.y < bottomRightBound.y) {
             newY = bottomRightBound.y;
         }
         cursor.transform.localPosition = new Vector2 (newX, newY);
@@ -98,7 +98,16 @@ public class CursorControl : MonoBehaviour {
             GameObject block = Instantiate(Resources.Load(blockName)) as GameObject;
             block.transform.position = new Vector2(cursor.transform.position.x, cursor.transform.position.y);
             block.transform.SetParent(transform);
-            block.GetComponent<Rigidbody2D>().velocity = body.velocity;
+            float velX = body.velocity.x;
+            float velY = body.velocity.y;
+            if (cursor.transform.localPosition.x <= topLeftBound.x || cursor.transform.localPosition.x >= bottomRightBound.x) {
+                velX = 0f;
+            }
+            if (cursor.transform.localPosition.y <= bottomRightBound.y || cursor.transform.localPosition.x >= topLeftBound.y) {
+                velY = 0f;
+            }
+
+            block.GetComponent<Rigidbody2D>().velocity = new Vector2(velX, velY);
         }
     }
 }
