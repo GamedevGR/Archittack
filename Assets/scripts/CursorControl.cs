@@ -103,7 +103,7 @@ public class CursorControl : MonoBehaviour {
             if (cursor.transform.localPosition.x <= topLeftBound.x || cursor.transform.localPosition.x >= bottomRightBound.x) {
                 velX = 0f;
             }
-            if (cursor.transform.localPosition.y <= bottomRightBound.y || cursor.transform.localPosition.x >= topLeftBound.y) {
+            if (cursor.transform.localPosition.y <= bottomRightBound.y || cursor.transform.localPosition.y >= topLeftBound.y) {
                 velY = 0f;
             }
 

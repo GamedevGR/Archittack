@@ -30,7 +30,7 @@ public class QueueUI : MonoBehaviour {
 	void Start () {
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManagerScript> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		Queue localQueue;
@@ -42,7 +42,6 @@ public class QueueUI : MonoBehaviour {
 
 		if (localQueue.Count == gameManager.queueLength) {
 			container = localQueue.ToArray();
-			//(container[0] as string).Split('/')[1];
 			image1.sprite = spriteLookup[(container[0] as string).Split('/')[1]];
 			image2.sprite = spriteLookup[(container[1] as string).Split('/')[1]];
 			image3.sprite = spriteLookup[(container[2] as string).Split('/')[1]];
