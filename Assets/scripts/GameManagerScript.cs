@@ -118,6 +118,7 @@ public class GameManagerScript : MonoBehaviour {
     {
         startMenu.SetActive(false);
         keyboardPanel.SetActive(true);
+        keyboardPanel.GetComponent<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(5);
         keyboardPanel.SetActive(false);
         player1.SetActive (true);
